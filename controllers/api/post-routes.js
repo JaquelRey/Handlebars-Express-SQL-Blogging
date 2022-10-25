@@ -6,10 +6,10 @@ const auth = require('../../utils/auth')
 router.post('/', auth, async (req, res) => {
   const content = req.body
   try {
-    const newPost = await Post.create({ ...content, userId: req.session.userId });
-    res.json(newPost);
+    const newPost = await Post.create({ ...content, userId: req.session.userId })
+    res.json(newPost)
   } catch (error) {
-    res.status(500).json(error);
+    res.status(500).json(error)
   }
 })
 
@@ -20,15 +20,15 @@ router.put('/:id', auth, async (req, res) => {
         where: {
         id: req.params.id,
       },
-    });
+    })
 
     if (rows > 0) {
-      res.status(200).end();
+      res.status(200).end()
     } else {
-      res.status(404).end();
+      res.status(404).end()
     }
   } catch (error) {
-    res.status(500).json(error);
+    res.status(500).json(error)
   }
 })
 
@@ -39,15 +39,15 @@ router.delete('/:id', auth, async (req, res) => {
         where: {
         id: req.params.id,
       },
-    });
+    })
 
     if (rows > 0) {
-      res.status(200).end();
+      res.status(200).end()
     } else {
-      res.status(404).end();
+      res.status(404).end()
     }
   } catch (error) {
-    res.status(500).json(error);
+    res.status(500).json(error)
   }
 })
 
