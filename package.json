@@ -9,7 +9,7 @@
   },
   "author": "",
   "license": "unlicense",
-  "homepage": "https://handlebars-tech-blog-demo.herokuapp.com/",
+  "homepage": "https://handlebars-tech-blog-demo.herokuapp.com",
   "dependencies": {
     "bcrypt": "^4.0.1",
     "connect-session-sequelize": "^6.1.1",
