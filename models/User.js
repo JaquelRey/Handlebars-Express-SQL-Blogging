@@ -1,18 +1,23 @@
 const sequelize = require('../config/config')
+//require dependency
 const { Model, DataTypes } = require('sequelize')
+// get model property
 const bcrypt = require('bcrypt')
+// require dependency to protech user data when verifying login info
 
-
-
-
-
+// create user class with model
+// user must have a verified match to pw, 
+// which is protected during verification using bcrypt
 class User extends Model {
-  // verify password
   verifyPw(loginPw) {
     return bcrypt.compareSync(loginPw, this.password)
   }
 }
-
+// create a user: 
+// an automatically generated ID
+// a username,
+// and a password of at least 8 characters
+// hooks for bcrypt password creatiom and update
 User.init(
   {
     id: {

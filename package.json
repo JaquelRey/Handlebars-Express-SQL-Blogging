@@ -3,19 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/coding-boot-camp/module-14-project-mvc.git"
+    "url": "git+https://github.com/JaquelRey/Handlebars-Express-SQL-Blogging"
   },
   "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/coding-boot-camp/module-14-project-mvc/issues"
-  },
-  "homepage": "https://github.com/coding-boot-camp/module-14-project-mvc#readme",
+  "license": "unlicense",
+  "homepage": "https://handlebars-tech-blog-demo.herokuapp.com/",
   "dependencies": {
     "bcrypt": "^4.0.1",
     "connect-session-sequelize": "^6.1.1",

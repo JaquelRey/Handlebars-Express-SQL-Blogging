@@ -1,19 +1,21 @@
-const sequelize = require('../config/config')
-const { Sequelize, Model, DataTypes } = require('sequelize')
+const sequelize = require("../config/config");
+// require dependency
+const { Sequelize, Model, DataTypes } = require("sequelize");
+// get model property
 
-
+// create class with model
 class Comment extends Model {}
-
+// add body and sequelize
 Comment.init(
   {
     body: {
       type: DataTypes.STRING,
-      allowNull: false
-    }
+      allowNull: false,
+    },
   },
   {
-    sequelize
+    sequelize,
   }
 );
 
-module.exports = Comment
+module.exports = Comment;

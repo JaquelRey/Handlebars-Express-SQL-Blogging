@@ -1,7 +1,10 @@
 const router = require('express').Router()
 const { Post, Comment, User } = require('../models/')
 
-// get all posts
+// to view all posts on homepage,
+// find all posts and include related user
+// map each individually,
+// render all posts view with post data
 router.get('/', async (req, res) => {
   try {
     const data = await Post.findAll({
@@ -17,7 +20,11 @@ router.get('/', async (req, res) => {
   }
 })
 
-// get one post
+// to view one post,
+// find post that matches req id,
+// if found, include related user and comments with their related users
+// create post from all data and render that to single post view
+// if matching id not found, return 500
 router.get('/post/:id', async (req, res) => {
   try {
     const data = await Post.findByPk(req.params.id, {
@@ -29,32 +36,36 @@ router.get('/post/:id', async (req, res) => {
     })
     if (data) {
       const post = data.get({ plain: true });
-
       res.render('single-post', { post })
     } else {
       res.status(500).json(error)
     }
-
   } catch (error) {
     res.status(500).json(error)
   }
 })
-// login if session verify
+
+// to view login,
+// check for a logged in session
+// if found, redirect to index
+// if not found, render login
 router.get('/login', (req, res) => {
   if (req.session.loggedIn) {
     res.redirect('/')
     return
   }
-
   res.render('login')
 })
-// sign up
+
+// to view sign up,
+// check for a logged in session
+// if found, redirect to index
+// if not found, render signup
 router.get('/signup', (req, res) => {
   if (req.session.loggedIn) {
     res.redirect('/')
     return
   }
-
   res.render('signup')
 })
 
