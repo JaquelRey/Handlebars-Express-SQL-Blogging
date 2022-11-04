@@ -2,7 +2,10 @@
   "name": "tech-blog",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
+  "engines": {
+		"node": "16.17.0"
+	  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/JaquelRey/Handlebars-Express-SQL-Blogging"
