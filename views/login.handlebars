@@ -1,22 +1,25 @@
 <div id="modal1" class="modal">
     <div class="modal-content blue-grey lighten-4">
-        <form id="login-form" class="card-panel teal lighten-5">
-            <h4>Login</h4>
-            <div>
-                <label for="name-input-login">Username</label>
-                <input type="text" id="name-input-login" />
-            </div>
-            <div>
-                <label for="pw-input-login" class="form-label">Password</label>
-                <input type="password" id="pw-input-login" />
-            </div>
-        </form>
+    <div class="row">
+    <form class="col s12 card-panel teal lighten-5" id="login-form">
+      <div class="row">
+        <div class="input-field col s12">
+          <input placeholder="User" id="name-input-login" type="text" class="validate">
+          <label for="name-input-login">Username</label>
+        </div>
+        <div class="input-field col s12">
+          <input placeholder="password" id="pw-input-login" type="password" class="validate">
+          <label for="pw-input-login">Password</label>
+        </div>
+      </div>
+    </form>
+  </div>
     </div>
     <div class="modal-footer blue-grey darken-2">
         <a href="/signup" onclick="openSignup()" type="button" data-target="modal2"
             class="btn modal-trigger waves-effect waves-green btn-flat deep-orange darken-4 teal-text text-lighten-5">Sign
             up</a>
-        <button type="submit" id="login-button"
+        <button type="submit" name="action" id="login-button"
             onclick="closeLogin()" class="waves-effect waves-green btn-flat deep-orange darken-3 teal-text text-lighten-5">Login</button>
     </div>
 
