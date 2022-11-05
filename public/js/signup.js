@@ -28,4 +28,4 @@ const signupHandler = async function (event) {
   }
 };
 // event listener for signup button
-document.querySelector("#signup").addEventListener("click", signupHandler);
+document.querySelector("#signup-button").addEventListener("click", signupHandler);
