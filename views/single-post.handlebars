@@ -14,7 +14,7 @@
           <p>{{post.body}}</p>
         </div>
         <div class="card-action">
-          <a href="#">This is a link</a>
+          <a href="/dashboard/edit/{{id}}" class="btn-floating deep-orange darken-3 pulse"><i class="material-icons">edit</i></a>
         </div>
       </div>
     </div>
@@ -28,11 +28,11 @@
       </div>
       {{! add comment modal button }}
       <a
-        href="#modal1"
+        href="#modal3"
         class="btn-floating waves-effect waves-light modal-trigger"
       ><i class="material-icons">add</i></a>
       {{! add comment modal }}
-      <div id="modal1" class="modal">
+      <div id="modal3" class="modal">
         <div class="modal-content">
           <h4>Add a Comment</h4>
           <div>
