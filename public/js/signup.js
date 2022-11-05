@@ -2,8 +2,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const elems = document.querySelectorAll(".modal");
   M.Modal.init(elems);
 });
-const signupId = document.querySelectorAll(".modal2");
-const signup = M.Modal.getInstance(signupId);
 // to sign up,
 const signupHandler = async function (event) {
     // prevent reload on form submit
@@ -31,7 +29,3 @@ const signupHandler = async function (event) {
   };
   // event listener for signup button
   document.querySelector("#signup-button").addEventListener("click", signupHandler);
-  
-  function closeSignup() {
-    signup.close();
-  }

@@ -2,9 +2,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const elems = document.querySelectorAll(".modal");
   M.Modal.init(elems);
 });
-const loginId = document.querySelectorAll(".modal1");
-const login = M.Modal.getInstance(loginId);
-
 // for a user to login,
 const loginHandler = async function (event) {
   //prevent reload for onclick submit
@@ -32,8 +29,3 @@ const loginHandler = async function (event) {
 };
 // click event listener for login form submission
 document.querySelector("#login-button").addEventListener("click", loginHandler);
-  
-function closeLogin() {
-  login.close();
-}
-
