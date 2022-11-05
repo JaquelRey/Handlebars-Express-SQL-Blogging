@@ -1,3 +1,7 @@
+document.addEventListener('DOMContentLoaded', function() {
+  var elem = document.querySelectorAll('.modal');
+  M.Modal.init(elem);
+});
 // to logout,
 const logout = async function () {
   // post to logout route
