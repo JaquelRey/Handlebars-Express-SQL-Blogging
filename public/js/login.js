@@ -1,8 +1,3 @@
-document.addEventListener('DOMContentLoaded', function() {
-  var elem = document.querySelectorAll('.modal');
-  M.Modal.init(elem);
-});
-
 // for a user to login,
 const loginHandler = async function (event) {
   //prevent reload for onclick submit
