@@ -9,6 +9,9 @@
     "mysql2": "^2.3.3",
     "sequelize": "^6.21.4"
   },
+  "scripts":  {
+    "start": "node server.js"
+  },
   "name": "tech-blog",
   "version": "1.0.0",
   "description": "",
@@ -16,6 +19,7 @@
   "engines": {
     "node": "16.17.0"
   },
+  "homepage": "https://handlebars-tech-blog-demo.herokuapp.com/",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/JaquelRey/Handlebars-Express-SQL-Blogging"
