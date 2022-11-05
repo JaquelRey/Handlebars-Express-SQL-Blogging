@@ -24,7 +24,7 @@ router.get("/", auth, async (req, res) => {
     });
   } catch (error) {
     console.log(error);
-    res.redirect("login");
+    res.redirect("/");
   }
 });
 
@@ -54,7 +54,7 @@ router.get("/edit/:id", auth, async (req, res) => {
       res.status(404).end();
     }
   } catch (error) {
-    res.redirect("login");
+    res.redirect("/");
   }
 });
 
