@@ -28,8 +28,17 @@ app.use(session(sess));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
-app.engine("handlebars", hbs.engine);
+app.engine(
+  "handlebars",
+  hbs.engine({
+    layoutsDir: __dirname + "/public/views/layouts",
+    defaultLayout: "main",
+    extname: "handlebars",
+    partialsDir: __dirname + "/public/views/partials",
+  })
+);
 app.set("view engine", "handlebars");
+app.set('views', path.join(__dirname, '/public/views'));
 app.use(routes);
 // connect to db and server
 sequelize.sync({ force: false }).then(() => {
