@@ -45,28 +45,4 @@ router.get('/post/:id', async (req, res) => {
   }
 })
 
-// to view login,
-// check for a logged in session
-// if found, redirect to index
-// if not found, render login (and signup for hidden modals to connect)
-router.get('/login', (req, res) => {
-  if (req.session.loggedIn) {
-    res.redirect('/')
-    return
-  }
-  res.render('login')
-})
-
-// to view sign up,
-// check for a logged in session
-// if found, redirect to index
-// if not found, render signup (and login for hidden modals to connect)
-router.get('/signup', (req, res) => {
-  if (req.session.loggedIn) {
-    res.redirect('/')
-    return
-  }
-  res.render('signup')
-})
-
 module.exports = router
