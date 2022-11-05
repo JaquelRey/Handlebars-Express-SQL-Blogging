@@ -1,64 +1,76 @@
 <div class="content">
-  <div class="row">
-    <div class="col s12">
-      <div class="card">
-        <div class="card-image">
-          <img src="https://i.imgur.com/9komQiX.png" />
-          <span class="card-title">{{post.title}}</span>
+    <div class="row">
+        <div class="col s12">
+            <div class="card">
+                <div class="card-image">
+                    <img src="https://i.imgur.com/9komQiX.png" />
+                    <span class="card-title">{{post.title}}</span>
+                </div>
+                <div class="card-content">
+                    <p>Posted by
+                        {{post.User.username}}
+                        on
+                        {{format_date post.createdAt}}</p>
+                    <p>{{post.body}}</p>
+                </div>
+                <div class="card-action">
+                    <a href="/dashboard/edit/{{id}}" class="btn-floating deep-orange darken-3 pulse"><i
+                            class="material-icons">edit</i></a>
+                </div>
+            </div>
         </div>
-        <div class="card-content">
-          <p>Posted by
-            {{post.User.username}}
-            on
-            {{format_date post.createdAt}}</p>
-          <p>{{post.body}}</p>
-        </div>
-        <div class="card-action">
-          <a href="/dashboard/edit/{{id}}" class="btn-floating deep-orange darken-3 pulse"><i class="material-icons">edit</i></a>
-        </div>
-      </div>
     </div>
-  </div>
-  {{#if post.Comments}}
+    {{#if post.Comments}}
     <section class="row">
-      <div class="col s12">
-        <blockquote class="h4">
-          Comments
-        </blockquote>
-      </div>
-      {{! add comment modal button }}
-      <a
-        href="#modal3"
-        class="btn-floating waves-effect waves-light modal-trigger"
-      ><i class="material-icons">add</i></a>
-      {{! add comment modal }}
-      <div id="modal3" class="modal">
-        <div class="modal-content">
-          <h4>Add a Comment</h4>
-          <div>
-            <input type="hidden" name="post-id" value="{{post.id}}" />
-            <label class="form-label" for="comment-content">Comment</label>
-            <textarea name="comment-content" class="form-input"></textarea>
-          </div>
+        <div class="col s12">
+            <blockquote class="h4">
+                Comments
+            </blockquote>
         </div>
-        <div class="modal-footer">
-          <button
-            type="submit"
-            class="modal-close waves-effect waves-green btn-flat"
-          >Submit Comment</button>
+        {{! add comment modal button }}
+        <a href="#modal3" class="btn-floating waves-effect waves-light modal-trigger"><i
+                class="material-icons">add</i></a>
+        {{! add comment modal }}
+        <div id="modal3" class="modal">
+            <div class="modal-content">
+                <form class="col s12 card-panel teal lighten-5" id="signup-form">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input type="hidden" name="post-id" value="{{post.id}}" />
+                        </div>
+                        <div class="input-field col s12">
+                            <input placeholder="User" id="name-input-signup" type="text" class="validate">
+                            <label for="name-input-signup">Username</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <input placeholder="Your comment here...." id="comment-input-signup" type="password" class="validate">
+                            <label for="pw-input-signup">Password</label>
+                        </div>
+                    </div>
+                </form>
+
+                <h4>Add a Comment</h4>
+                <div>
+
+                    <label class="form-label" for="comment-content">Comment</label>
+                    <textarea name="comment-content" class="form-input"></textarea>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="modal-close waves-effect waves-green btn-flat">Submit Comment</button>
+            </div>
         </div>
-      </div>
-      {{#each post.Comments}}
+        {{#each post.Comments}}
         <div class="col s12 m6">
-          <div class="card-panel">
-            <span class="h5">{{User.username}}, {{format_date createdAt}}</span>
-            <span class="flow-text">{{body}}
-            </span>
-          </div>
+            <div class="card-panel">
+                <span class="h5">{{User.username}}, {{format_date createdAt}}</span>
+                <span class="flow-text">{{body}}
+                </span>
+            </div>
         </div>
-      {{/each}}
+        {{/each}}
     </section>
-  {{/if}}
+    {{/if}}
 </div>
 
 <script src="/js/comment.js"></script>

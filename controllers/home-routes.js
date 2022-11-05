@@ -55,7 +55,6 @@ router.get('/login', (req, res) => {
     return
   }
   res.render('login')
-  res.render('signup')
 })
 
 // to view sign up,
@@ -68,7 +67,6 @@ router.get('/signup', (req, res) => {
     return
   }
   res.render('signup')
-  res.render('login')
 })
 
 module.exports = router
