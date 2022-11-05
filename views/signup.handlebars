@@ -1,21 +1,24 @@
-<div class="card">
-  <div class="card-header">
-    <h2>Sign Up</h2>
-  </div>
-  <div id="signup" role="tabpanel">
-    <form id="signup-form" class="card-body">
-      <div>
-        <label for="username-input-signup">Username</label>
-        <input type="text" id="username-input-signup" />
-      </div>
-      <div>
-        <label for="password-input-signup">Password</label>
-        <input type="password" id="password-input-signup" />
-      </div>
-      <button type="submit" id="signup-btn" class="btn" >Signup!</button>
-      <a href="/login">Login instead</a>
-    </form>
-  </div>
+<div id="modal2" class="modal">
+    <div class="modal-content blue-grey lighten-4">
+        <h4>Sign up</h4>
+        <form id="login-form" class="card-panel teal lighten-5">
+            <div>
+                <label for="name-input-login">Username</label>
+                <input type="text" id="name-input-login" />
+            </div>
+            <div>
+                <label for="pw-input-login" class="form-label">Password</label>
+                <input type="password" id="pw-input-login" />
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer blue-grey darken-2">
+        <a href="/login" type="button" data-target="modal1"
+            class="btn modal-trigger waves-effect waves-green btn-flat deep-orange darken-3 teal-text text-lighten-5">Login</a>
+        <button type="submit" id="signup-btn"
+            class="modal-close waves-effect waves-green btn-flat deep-orange darken-4 teal-text text-lighten-5">Sign
+            up</button>
+    </div>
 </div>
 
 <script src="/js/signup.js"></script>

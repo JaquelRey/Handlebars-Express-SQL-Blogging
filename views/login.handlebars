@@ -1,0 +1,24 @@
+<div id="modal1" class="modal">
+    <div class="modal-content blue-grey lighten-4">
+        <h4>Login</h4>
+        <form id="login-form" class="card-panel teal lighten-5">
+            <div>
+                <label for="name-input-login">Username</label>
+                <input type="text" id="name-input-login" />
+            </div>
+            <div>
+                <label for="pw-input-login" class="form-label">Password</label>
+                <input type="password" id="pw-input-login" />
+            </div>
+            <button type="submit" id="login-btn" class="btn">Login!</button>
+            <a type="button" href="/signup">Sign up instead</a>
+        </form>
+    </div>
+    <div class="modal-footer blue-grey darken-2">
+        <a href="/login" type="button" data-target="modal2"
+            class="btn modal-trigger waves-effect waves-green btn-flat deep-orange darken-3 teal-text text-lighten-5">Sign up</a>
+        <button type="submit" id="login-btn"
+            class="modal-close waves-effect waves-green btn-flat deep-orange darken-4 teal-text text-lighten-5">Login</button>
+    </div>
+</div>
+<script src="/js/login.js"></script>
