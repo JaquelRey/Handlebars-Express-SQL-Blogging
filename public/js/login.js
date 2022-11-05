@@ -8,14 +8,14 @@ const loginHandler = async function (event) {
   //prevent reload for onclick submit
   event.preventDefault();
   // get user input for username and pw
-  const nameEl = document.querySelector("#name-input-login");
-  const pwEl = document.querySelector("#pw-input-login");
+  const nameElL = document.querySelector("#name-input-login");
+  const pwElL = document.querySelector("#pw-input-login");
   // send as json string, with appropriate header
   const res = await fetch("/api/user/login", {
     method: "POST",
     body: JSON.stringify({
-      username: nameEl.value,
-      password: pwEl.value,
+      username: nameElL.value,
+      password: pwElL.value,
     }),
     headers: { "Content-Type": "application/json" },
   });
