@@ -21,11 +21,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
 
-  <body class="flex-column min-100-vh blue lighten-5">
+  <body class="flex-column min-100-vh teal lighten-5">
     {{! navbar with mobile collapse }}
     <nav>
-      <div class="nav-wrapper">
-        <a href="#" class="brand-logo">Hello World</a>
+      <div class="nav-wrapper blue-grey darken-2">
+        <a href="#" class="brand-logo">Logo</a>
         <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i
             class="material-icons"
           >menu</i></a>
@@ -37,9 +37,10 @@
       </div>
     </nav>
     {{! mobile options }}
-    <ul class="sidenav" id="mobile-demo">
-      <li class="waves-effect"><a href="/">Home</a></li>
-      <li><a href="/dashboard">Dashboard</a></li>
+    <ul class="sidenav teal lighten-5" id="mobile-demo">
+      <li class="h5">Navigation</li>
+      <li><a href="/">Home</a></li>
+      <li class="deep-orange darken-3"><a href="/dashboard">Dashboard</a></li>
       <li><a href="#" id="logout-link">Logout</a></li>
     </ul>
     {{!materialize containter for main content }}
