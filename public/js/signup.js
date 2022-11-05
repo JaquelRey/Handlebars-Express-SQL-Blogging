@@ -2,8 +2,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const elems = document.querySelectorAll(".modal");
   M.Modal.init(elems);
 });
-const loginId = document.querySelectorAll(".modal1");
-const login = M.Modal.getInstance(loginId);
 const signupId = document.querySelectorAll(".modal2");
 const signup = M.Modal.getInstance(signupId);
 // to sign up,
@@ -34,9 +32,6 @@ const signupHandler = async function (event) {
   // event listener for signup button
   document.querySelector("#signup-button").addEventListener("click", signupHandler);
   
-  function openLogin() {
-    login.open();
-  }
   function closeSignup() {
     signup.close();
   }
