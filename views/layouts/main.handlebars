@@ -1,83 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tech Blog Demo</title>
-    {{! <!--Import Google Icon Font--> }}
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    {{! <!--Import materialize.css--> }}
-    <link
-      type="text/css"
-      rel="stylesheet"
-      href="css/materialize.min.css"
-      media="screen,projection"
-    />
+    {{!
+    <!--Import Google Icon Font--> }}
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    {{!
+    <!--Import materialize.css--> }}
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
 
-    {{! <!--Let browser know website is optimized for mobile--> }}
+    {{!
+    <!--Let browser know website is optimized for mobile--> }}
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  </head>
+</head>
 
-  <body class="flex-column min-100-vh teal lighten-5">
+<body class="flex-column min-100-vh">
     {{! navbar with mobile collapse }}
     <nav>
-      <div class="nav-wrapper blue-grey darken-2">
-        <a href="#" class="brand-logo">Logo</a>
-        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i
-            class="material-icons"
-          >menu</i></a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li class="active"><a href="/">Home</a></li>
-          <li><a href="/dashboard">Dashboard</a></li>
-          <li><a href="#" id="logout-link">Logout</a></li>
-        </ul>
-      </div>
+        <div class="nav-wrapper blue-grey darken-2">
+            <a href="#" class="brand-logo">Logo</a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li class="active"><a href="/">Home</a></li>
+                <li><a href="/dashboard">Dashboard</a></li>
+                <li><a href="#" id="logout-link">Logout</a></li>
+            </ul>
+        </div>
     </nav>
     {{! mobile options }}
     <ul class="sidenav teal lighten-5" id="mobile-demo">
-      <li class="h5">Navigation</li>
-      <li><a href="/">Home</a></li>
-      <li class="deep-orange darken-3"><a href="/dashboard">Dashboard</a></li>
-      <li><a href="#" id="logout-link">Logout</a></li>
+        <li class="h5">Navigation</li>
+        <li><a href="/">Home</a></li>
+        <li class="deep-orange darken-3"><a href="/dashboard">Dashboard</a></li>
+        <li><a href="#" id="logout-link">Logout</a></li>
     </ul>
     {{!materialize containter for main content }}
-    <div class="container">
 
-      <main class="section">
-        {{{body}}}
-      </main>
-
+    <div id="main-hub" class="col s12 blue-grey lighten-4">
+        <div class="container">
+            <div class="card">
+                <div class="card-content teal lighten-5">
+                    <main class="section">
+                        {{{body}}}
+                    </main>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <footer class="page-footer">
-          <div class="container">
+    <footer class="page-footer blue-grey darken-2">
+        <div class="container">
             <div class="row">
-              <div class="col l6 s12">
-                <h5 class="white-text">Hello World: a tech blog demo by Jaquel Rey.</h5>
-                <p class="grey-text text-lighten-4">This is a fully responsive app; using mySQL, Node, Express, and Handlebars. Database deployed with JawsDB.</p>
-              </div>
-              <div class="col l4 offset-l2 s12">
-                <h5 class="white-text">Links</h5>
-                <ul>
-                  <li></li><a href="https://stocksnap.io/photo/computer-office-DAVHEACBV0">Post head photo</a> by <a href="https://stocksnap.io/author/lenharthsystems">Lenharth Systems</a> on <a href="https://stocksnap.io">StockSnap</a></li>
-                  <li><a class="grey-text text-lighten-3" href="https://materializecss.com/">Styled with Materialize</a></li>
-                  <li><a class="grey-text text-lighten-3" href="https://github.com/JaquelRey/Handlebars-Express-SQL-Blogging">Github Repo</a></li>
-                  <li><a class="grey-text text-lighten-3" href="https://crouton.net/">A crouton- really.</a></li>
-                </ul>
-              </div>
+                <div class="col l6 s12">
+                    <h5 class="white-text">Hello World: a tech blog demo by Jaquel Rey.</h5>
+                    <p class="grey-text text-lighten-4">This is a fully responsive app; using mySQL, Node, Express, and
+                        Handlebars. Database deployed with JawsDB.</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Links</h5>
+                    <ul>
+                        <li></li><a href="https://stocksnap.io/photo/computer-office-DAVHEACBV0">Post head photo</a> by
+                        <a href="https://stocksnap.io/author/lenharthsystems">Lenharth Systems</a> on <a
+                            href="https://stocksnap.io">StockSnap</a></li>
+                        <li><a class="grey-text text-lighten-3" href="https://materializecss.com/">Styled with
+                                Materialize</a></li>
+                        <li><a class="grey-text text-lighten-3"
+                                href="https://github.com/JaquelRey/Handlebars-Express-SQL-Blogging">Github Repo</a></li>
+                        <li><a class="grey-text text-lighten-3" href="https://crouton.net/">A crouton- really.</a></li>
+                    </ul>
+                </div>
             </div>
-          </div>
-          <div class="footer-copyright">
+        </div>
+        <div class="footer-copyright">
             <div class="container">
-            &copy; 2022 Jaquel Rey
-            <a class="grey-text text-lighten-4 right" href="https://github.com/JaquelRey">My github</a>
+                &copy; 2022 Jaquel Rey
+                <a class="grey-text text-lighten-4 right" href="https://github.com/JaquelRey">My github</a>
             </div>
-          </div>
+        </div>
     </footer>
-  </body>
+</body>
 
 </html>
 <script type="text/javascript" src="/js/materialize.min.js"></script>
