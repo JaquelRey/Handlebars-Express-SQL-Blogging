@@ -28,11 +28,6 @@ const loginHandler = async function (event) {
     alert("Login failed, try again.");
   }
 };
-// click event listener for login form submission
-document.querySelector("#login-button").addEventListener("click", loginHandler);
-
-
-
 // to sign up,
 const signupHandler = async function (event) {
   // prevent reload on form submit
@@ -58,5 +53,7 @@ const signupHandler = async function (event) {
     alert("Sign up failed, try again.");
   }
 };
+// click event listener for login form submission
+document.querySelector("#login-button").addEventListener("click", loginHandler);
 // event listener for signup button
 document.querySelector("#signup-button").addEventListener("click", signupHandler);
