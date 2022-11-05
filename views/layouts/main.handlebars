@@ -1,0 +1,61 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tech Blog Demo</title>
+    {{! <!--Import Google Icon Font--> }}
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    {{! <!--Import materialize.css--> }}
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="css/materialize.min.css"
+      media="screen,projection"
+    />
+
+    {{! <!--Let browser know website is optimized for mobile--> }}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+
+  <body class="flex-column min-100-vh teal lighten-2">
+    {{! navbar with mobile collapse }}
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo">Logo</a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i
+            class="material-icons"
+          >menu</i></a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li class="active"><a href="/">Home</a></li>
+          <li><a href="/dashboard">Dashboard</a></li>
+          <li><a href="#" id="logout-link">Logout</a></li>
+        </ul>
+      </div>
+    </nav>
+    {{! mobile options }}
+    <ul class="sidenav" id="mobile-demo">
+      <li class="active"><a href="/">Home</a></li>
+      <li><a href="/dashboard">Dashboard</a></li>
+      <li><a href="#" id="logout-link">Logout</a></li>
+    </ul>
+    {{!materialize containter for main content }}
+    <div class="container">
+
+      <main class="section">
+        {{{body}}}
+      </main>
+
+    </div>
+
+    <footer class="section center-align">
+      <a href="https://stocksnap.io/photo/computer-office-DAVHEACBV0">Post Card Photo</a> by <a href="https://stocksnap.io/author/lenharthsystems">Lenharth Systems</a> on <a href="https://stocksnap.io">StockSnap</a>
+    </footer>
+  </body>
+
+</html>
+<script type="text/javascript" src="js/materialize.min.js"></script>
+<script src="/js/logout.js"></script>
+<script src="/js/mobile-nav.js"></script>

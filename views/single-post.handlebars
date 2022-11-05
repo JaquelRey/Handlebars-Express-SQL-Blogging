@@ -1,0 +1,64 @@
+<div class="content">
+  <div class="row">
+    <div class="col s12">
+      <div class="card">
+        <div class="card-image">
+          <img src="https://i.imgur.com/9komQiX.png" />
+          <span class="card-title">{{post.title}}</span>
+        </div>
+        <div class="card-content">
+          <p>Posted by
+            {{post.User.username}}
+            on
+            {{format_date post.createdAt}}</p>
+          <p>{{post.body}}</p>
+        </div>
+        <div class="card-action">
+          <a href="#">This is a link</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{#if post.Comments}}
+    <section class="row">
+      <div class="col s12">
+        <blockquote class="h4">
+          Comments
+        </blockquote>
+      </div>
+      {{! add comment modal button }}
+      <a
+        href="#modal1"
+        class="btn-floating waves-effect waves-light modal-trigger"
+      ><i class="material-icons">add</i></a>
+      {{! add comment modal }}
+      <div id="modal1" class="modal">
+        <div class="modal-content">
+          <h4>Add a Comment</h4>
+          <div>
+            <input type="hidden" name="post-id" value="{{post.id}}" />
+            <label class="form-label" for="comment-content">Comment</label>
+            <textarea name="comment-content" class="form-input"></textarea>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button
+            type="submit"
+            class="modal-close waves-effect waves-green btn-flat"
+          >Submit Comment</button>
+        </div>
+      </div>
+      {{#each post.Comments}}
+        <div class="col s12 m6">
+          <div class="card-panel">
+            <span class="h5">{{User.username}}, {{format_date createdAt}}</span>
+            <span class="flow-text">{{body}}
+            </span>
+          </div>
+        </div>
+      {{/each}}
+    </section>
+  {{/if}}
+</div>
+
+<script src="/js/comment.js"></script>
