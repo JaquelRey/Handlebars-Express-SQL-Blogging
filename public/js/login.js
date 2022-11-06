@@ -11,7 +11,6 @@ const click22 = document.getElementById("#signup-btn2")
 const loginHandler = async function (event) {
   //prevent reload for onclick submit
   const elemt = document.getElementById("#modal1");
-  const instance = M.Modal.getInstance(elemt);
   event.preventDefault();
   // get user input for username and pw
   const nameElL = document.querySelector("#name-input-login");
@@ -29,7 +28,7 @@ const loginHandler = async function (event) {
   // user is redirected to dashboard.
   // if failed, user is alerted and remains on login view
   if (res.ok) {
-    instance.destroy()
+    
     document.location.replace("/dashboard");
     passwordEl.innerHTML = ''
     usernameEl.innerHTML = ''
@@ -37,6 +36,7 @@ const loginHandler = async function (event) {
     logout22.classList.remove('hide')
     click12.classList.add('hide')
     click22.classList.add('hide')
+    elemt.classList.add('hide')
   } else {
     alert("Login failed, try again.");
   }
