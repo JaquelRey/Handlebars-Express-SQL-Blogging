@@ -7,11 +7,10 @@
         <div class="card-image">
           <img src="https://i.imgur.com/9komQiX.png">
           <span class="card-title">{{title}}</span>
-          <a href="/post/{{id}}" class="btn-floating halfway-fab waves-effect waves-light deep-orange darken-3"><i class="material-icons">more</i></a>
+          <a href="/dashboard/edit/{{id}}" class="btn-floating halfway-fab waves-effect waves-light deep-orange darken-3"><i class="material-icons">edit</i></a>
         </div>
         <div class="card-content">
-          <p class="flow-text">Posted by {{User.username}} on {{format_date createdAt}}</p>
-          <p class="flow-text">{{body}}</p>
+          <p class="flow-text">{{format_date createdAt}}</p>
         </div>
       </div>
     </div>

@@ -33,31 +33,21 @@
         {{! add comment modal }}
         <div id="modal3" class="modal">
             <div class="modal-content">
-                <form class="col s12 card-panel teal lighten-5" id="signup-form">
+                <form class="col s12 card-panel teal lighten-5" id="comment-form">
                     <div class="row">
                         <div class="input-field col s12">
                             <input type="hidden" name="post-id" value="{{post.id}}" />
                         </div>
                         <div class="input-field col s12">
-                            <input placeholder="User" id="name-input-signup" type="text" class="validate">
-                            <label for="name-input-signup">Username</label>
-                        </div>
-                        <div class="input-field col s12">
-                            <input placeholder="Your comment here...." id="comment-input-signup" type="password" class="validate">
-                            <label for="pw-input-signup">Password</label>
+                            <i class="material-icons prefix">mode_edit</i>
+                            <textarea id="textarea1" class="materialize-textarea"></textarea>
+                            <label for="textarea1">Post body:</label>
                         </div>
                     </div>
                 </form>
-
-                <h4>Add a Comment</h4>
-                <div>
-
-                    <label class="form-label" for="comment-content">Comment</label>
-                    <textarea name="comment-content" class="form-input"></textarea>
-                </div>
             </div>
             <div class="modal-footer">
-                <button type="submit" class="modal-close waves-effect waves-green btn-flat">Submit Comment</button>
+                <button type="submit" name="action" id="comment-button" class="modal-close waves-effect waves-blue btn-flat">Submit Comment</button>
             </div>
         </div>
         {{#each post.Comments}}
