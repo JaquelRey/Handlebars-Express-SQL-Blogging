@@ -1,11 +1,13 @@
-const elems = document.querySelectorAll(".modal1");
-const instance = M.Modal.init(elems, {dismissible: false});
 
 document.addEventListener("DOMContentLoaded", function () {
+  const elems = document.querySelectorAll(".modal2");
+  const instance = M.Modal.init(elems, {dismissible: false});
   instance.open();
 });
 // to sign up,
 const signupHandler = async function (event) {
+  const elems = document.querySelectorAll(".modal2");
+  const instance = M.Modal.init(elems);
     // prevent reload on form submit
     event.preventDefault();
     // get user input for username and password
@@ -24,6 +26,7 @@ const signupHandler = async function (event) {
     // redirect user to their dashboard
     // else, alert user to failure
     if (res.ok) {
+      instance.close()
       document.location.replace("/dashboard");
     } else {
       alert("Sign up failed, try again.");
@@ -31,4 +34,3 @@ const signupHandler = async function (event) {
   };
   // event listener for signup button
   document.querySelector("#signup-button").addEventListener("click", signupHandler);
-  document.querySelector("#signup-button").addEventListener("click", instance.close());
