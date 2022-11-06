@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", function () {
     let instance1 = M.Modal.getInstance(elem)
     instance1.open();
   }
-  
 });
 const logout = document.getElementById("#logout-link");
 const logout2 = document.getElementById("#logout-link2");
