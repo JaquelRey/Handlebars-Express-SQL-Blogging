@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const elems = document.querySelectorAll(".modal");
+  const elems = document.querySelector(".modal1");
   M.Modal.init(elems);
 });
 // for a user to login,

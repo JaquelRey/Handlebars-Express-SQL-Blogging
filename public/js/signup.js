@@ -1,6 +1,6 @@
 
 document.addEventListener("DOMContentLoaded", function () {
-  const elem = document.querySelectorAll(".modal2");
+  const elem = document.querySelector(".modal2");
   M.Modal.init(elem, {dismissible: false});
   const instance = M.Modal.getInstance(elem);
   instance.open();
