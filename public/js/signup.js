@@ -1,7 +1,8 @@
 
 document.addEventListener("DOMContentLoaded", function () {
-  const elems = document.querySelectorAll(".modal2");
-  const instance = M.Modal.init(elems, {dismissible: false});
+  const elem = document.querySelectorAll(".modal2");
+  M.Modal.init(elem, {dismissible: false});
+  const instance = M.Modal.getInstance(elem);
   instance.open();
 });
 // to sign up,
