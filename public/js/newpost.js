@@ -3,8 +3,8 @@ const postHandler = async function (event) {
   //prevent reload on form submission
   event.preventDefault();
   // get data from the post form
-  const title = document.querySelector('input[name="post-title"]').value;
-  const content = document.querySelector('textarea[name="post-body"]').value;
+  const title = document.querySelectorAll('input[name="post-title"]').value;
+  const content = document.querySelectorAll('textarea[name="post-body"]').value;
   // send data as jason string as POST to post route
   await fetch(`/api/post`, {
     method: "POST",
@@ -19,5 +19,5 @@ const postHandler = async function (event) {
 };
 // listener for click on form submission
 document
-  .querySelector(".post-form")
+  .querySelectorAll("#post-form")
   .addEventListener("submit", postHandler);

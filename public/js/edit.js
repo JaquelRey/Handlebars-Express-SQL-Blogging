@@ -7,9 +7,9 @@ const editHandler = async function (event) {
   // select form field inputs,
   // to get user input as post data.
   // post title
-  const title = document.querySelector('input[name="post-title"]').value;
+  const title = document.querySelectorAll('input[name="post-title"]').value;
   // post body
-  const content = document.querySelector('textarea[name="post-body"]').value;
+  const content = document.querySelectorAll('textarea[name="post-body"]').value;
   // send as json string, with appropriate header,
   // to the corresponding post id for the edit to effect
   await fetch(`/api/post/${postId}`, {
@@ -37,6 +37,6 @@ const deleteHandler = async function () {
 };
 // adding listeners for onclick events
 // edit
-document.querySelector(".edit-form").addEventListener("submit", editHandler);
+document.querySelectorAll("#edit-form").addEventListener("submit", editHandler);
 // delete
-document.querySelector("#delete-button").addEventListener("click", deleteHandler);
+document.querySelectorAll("#delete-button").addEventListener("click", deleteHandler);
