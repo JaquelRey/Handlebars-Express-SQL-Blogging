@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const elems = document.querySelector(".modal1");
+  const elems = document.querySelector("#modal1");
   M.Modal.init(elems);
 });
 // for a user to login,
@@ -28,4 +28,6 @@ const loginHandler = async function (event) {
   }
 };
 // click event listener for login form submission
-document.querySelector("#login-button").addEventListener("click", loginHandler);
+document
+  .querySelector("#login-form")
+  .addEventListener("submit", loginHandler);

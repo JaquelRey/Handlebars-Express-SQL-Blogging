@@ -1,6 +1,6 @@
 
 document.addEventListener("DOMContentLoaded", function () {
-  const elem = document.querySelector(".modal2");
+  const elem = document.querySelector("#modal2");
   M.Modal.init(elem, {dismissible: false});
   const instance = M.Modal.getInstance(elem);
   instance.open();
@@ -34,4 +34,5 @@ const signupHandler = async function (event) {
     }
   };
   // event listener for signup button
-  document.querySelector("#signup-button").addEventListener("click", signupHandler);
+  document.querySelector('#signup-form')
+  .addEventListener('submit', signupHandler);
