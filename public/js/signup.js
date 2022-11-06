@@ -1,8 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const elem = document.getElementById("#modal2");
-  M.Modal.init(elem, {dismissible: false});
-  if (elem){
-    let instance1 = M.Modal.getInstance(elem)
+  const elems = document.querySelectorAll('.modal')
+  M.Modal.init(elems, {dismissible: false});
+  const elemt = document.querySelectorAll("#modal2");
+  if (elemt){
+    let instance1 = M.Modal.getInstance(elemt)
     instance1.open();
   }
 });
@@ -12,7 +13,7 @@ const click = document.getElementById("#signup-btn")
 const click2 = document.getElementById("#signup-btn2")
 // to sign up,
 const signupHandler = async function (event) {
-  const elem = document.getElementById("#modal2");
+  const elem = document.querySelectorAll("#modal2");
   let instance1 = M.Modal.getInstance(elem);
     // prevent reload on form submit
     event.preventDefault();
