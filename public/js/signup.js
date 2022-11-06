@@ -1,10 +1,11 @@
-
-
 document.addEventListener("DOMContentLoaded", function () {
   const elem = document.getElementById("#modal2");
   M.Modal.init(elem, {dismissible: false});
-  let instance1 = M.Modal.getInstance(elem)
-  instance1.open();
+  if (elem){
+    let instance1 = M.Modal.getInstance(elem)
+    instance1.open();
+  }
+  
 });
 const logout = document.getElementById("#logout-link");
 const logout2 = document.getElementById("#logout-link2");
