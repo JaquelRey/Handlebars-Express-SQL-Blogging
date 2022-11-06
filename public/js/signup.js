@@ -4,8 +4,8 @@ const logout2 = document.getElementById("#logout-link2");
 const click = document.getElementById("#signup-btn")
 const click2 = document.getElementById("#signup-btn2")
 document.addEventListener("DOMContentLoaded", function () {
-  let instance = M.Modal.getInstance(elem)
   M.Modal.init(elem, {dismissible: false});
+  let instance = M.Modal.getInstance(elem)
   instance.open();
 });
 

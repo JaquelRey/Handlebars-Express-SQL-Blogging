@@ -1,8 +1,8 @@
 const elems = document.getElementById("#modal1");
 const logout12 = document.getElementById("#logout-link");
 const logout22 = document.getElementById("#logout-link2");
-const click = document.getElementById("#signup-btn")
-const click2 = document.getElementById("#signup-btn2")
+const click12 = document.getElementById("#signup-btn")
+const click22 = document.getElementById("#signup-btn2")
 document.addEventListener("DOMContentLoaded", function () {
   const elems = document.getElementById("#modal1");
   M.Modal.init(elems);
@@ -34,8 +34,8 @@ const loginHandler = async function (event) {
     usernameEl.innerHTML = ''
     logout12.classList.remove('hide')
     logout22.classList.remove('hide')
-    click.classList.add('hide')
-    click2.classList.add('hide')
+    click12.classList.add('hide')
+    click22.classList.add('hide')
   } else {
     alert("Login failed, try again.");
   }
