@@ -1,22 +1,26 @@
-const express = require("express");
-const routes = require("./controllers");
-const sequelize = require("./config/config");
 const path = require("path");
+const express = require("express");
+const session = require("express-session");
+const exphbs = require("express-handlebars");
+const routes = require("./controllers");
 const helpers = require("./utils/helpers");
 
-const exphandlebars = require("express-handlebars");
+const sequelize = require("./config/config");
+const SequelizeStore = require("connect-session-sequelize")(session.Store);
 
-const handlebars = exphandlebars.create({ helpers });
-const session = require("express-session");
 const app = express();
 const PORT = process.env.PORT || 3306;
-const SequelizeStore = require("connect-session-sequelize")(session.Store);
+
+const hbs = exphandlebars.create({ helpers });
+
 
 const sess = {
   secret: "Super secret secret",
   cookie: {
-    // Session expires in 20 m
-    expires: 20 * 60 * 1000,
+    maxAge: 300000,
+    httpOnly: true,
+    secure: false,
+    sameSite: 'strict',
   },
   resave: true,
   rolling: true,
@@ -27,20 +31,16 @@ const sess = {
 };
 
 app.use(session(sess));
+
+app.engine('handlebars', hbs.engine);
+app.set('view engine', 'handlebars');
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
+
 app.set('views', path.join(__dirname, '/views'));
-app.set("view engine", "handlebars");
-app.engine(
-  "handlebars",
-  handlebars.engine({
-    layoutsDir: __dirname + "/views/layouts",
-    defaultLayout: "main",
-    extname: "handlebars",
-    partialsDir: __dirname + "/views/partials",
-  })
-);
+
 
 
 app.use(routes);
