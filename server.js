@@ -4,9 +4,9 @@ const sequelize = require("./config/config");
 const path = require("path");
 const helpers = require("./utils/helpers");
 
-const exphbs = require("express-handlebars");
+const exphandlebars = require("express-handlebars");
 
-const hbs = exphbs.create({ helpers });
+const handlebars = exphandlebars.create({ helpers });
 const session = require("express-session");
 const app = express();
 const PORT = process.env.PORT || 3306;
@@ -33,8 +33,8 @@ app.use(express.static(path.join(__dirname, "public")));
 app.set('views', path.join(__dirname, '/views'));
 app.set("view engine", "handlebars");
 app.engine(
-  "hbs",
-  hbs.engine({
+  "handlebars",
+  handlebars.engine({
     layoutsDir: __dirname + "/views/layouts",
     defaultLayout: "main",
     extname: "handlebars",
