@@ -3,7 +3,9 @@ const routes = require("./controllers");
 const sequelize = require("./config/config");
 const path = require("path");
 const helpers = require("./utils/helpers");
+
 const exphbs = require("express-handlebars");
+
 const hbs = exphbs.create({ helpers });
 const session = require("express-session");
 const app = express();
@@ -28,17 +30,18 @@ app.use(session(sess));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
+
 app.engine(
   "handlebars",
   hbs({
-    layoutsDir: __dirname + "/public/views/layouts",
+    layoutsDir: __dirname + "/views/layouts",
     defaultLayout: "main",
     extname: "handlebars",
-    partialsDir: __dirname + "/public/views/partials",
+    partialsDir: __dirname + "/views/partials",
   })
 );
 app.set("view engine", "handlebars");
-app.set('views', path.join(__dirname, '/public/views'));
+app.set('views', path.join(__dirname, '/views'));
 app.use(routes);
 // connect to db and server
 sequelize.sync({ force: false }).then(() => {
