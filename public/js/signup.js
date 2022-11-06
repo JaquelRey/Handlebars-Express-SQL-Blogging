@@ -5,13 +5,13 @@ const click = document.getElementById("#signup-btn")
 const click2 = document.getElementById("#signup-btn2")
 document.addEventListener("DOMContentLoaded", function () {
   M.Modal.init(elem, {dismissible: false});
-  let instance = M.Modal.getInstance(elem)
-  instance.open();
+  let instance1 = M.Modal.getInstance(elem)
+  instance1.open();
 });
 
 // to sign up,
 const signupHandler = async function (event) {
-  let instance = M.Modal.getInstance(elem);
+  let instance1 = M.Modal.getInstance(elem);
     // prevent reload on form submit
     event.preventDefault();
     // get user input for username and password
@@ -30,7 +30,7 @@ const signupHandler = async function (event) {
     // redirect user to their dashboard
     // else, alert user to failure
     if (res.ok) {
-      instance.destroy()
+      instance1.destroy()
       document.location.replace("/dashboard");
       passwordEl.innerHTML = ''
       usernameEl.innerHTML = ''
