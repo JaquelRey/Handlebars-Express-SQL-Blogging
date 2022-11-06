@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
   const elems = document.querySelectorAll('.modal')
-  M.Modal.init(elems, {dismissible: false});
+  M.Modal.init(elems);
+  let elem2 = document.querySelector(".modal2")
+  elem2.open({dismissible: false})
 });
 const logout = document.getElementById("#logout-link");
 const logout2 = document.getElementById("#logout-link2");
