@@ -2,45 +2,45 @@ const { Comment } = require("../models");
 
 const commentData = [
   {
-    "user_id": 1,
-    "post_id": 3,
-    "comment_text": "I'd just like you to apologize...",
+    "userId": 1,
+    "postId": 3,
+    "body": "I'd just like you to apologize...",
   },
   {
-    "user_id": 2,
-    "post_id": 3,
-    "comment_text": "You need to be deplatformed.",
+  "userId": 2,
+  "postId": 3,
+  "body": "You need to be deplatformed.",
   },
   {
-    "user_id": 3,
-    "post_id": 2,
-    "comment_text": "Cope!",
+  "userId": 3,
+  "postId": 2,
+  "body": "Cope!",
   },
   {
-    "user_id": 3,
-    "post_id": 1,
-    "comment_text": "BONK!",
+    "userId": 3,
+    "postId": 1,
+    "body": "BONK!",
   },
   {
-    "user_id": 4,
-    "post_id": 4,
-    "comment_text": "Feed me. Feed me. Feed me. Feed me. Feed me. Feed me. ",
+    "userId": 4,
+    "postId": 4,
+    "body": "Feed me. Feed me. Feed me. Feed me. Feed me. Feed me. ",
   },
   {
-    "user_id": 5,
-    "post_id": 4,
-    "comment_text":
+    "userId": 5,
+    "postId": 4,
+    "body":
       "There is literally food in your dish.",
   },
   {
-    "user_id": 5,
-    "post_id": 3,
-    "comment_text": "I'm going goose hunting...",
+    "userId": 5,
+    "postId": 3,
+    "body": "I'm going goose hunting...",
   },
   {
-    "user_id": 4,
-    "post_id": 5,
-    "comment_text": "Feed me. Feed me. Feed me. Feed me. Feed me. Feed me. ",
+    "userId": 4,
+    "postId": 5,
+    "body": "Feed me. Feed me. Feed me. Feed me. Feed me. Feed me. ",
   },
 ];
 
