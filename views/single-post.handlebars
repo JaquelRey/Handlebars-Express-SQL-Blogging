@@ -10,11 +10,11 @@
                     <p>Posted by
                         {{post.User.username}}
                         on
-                        {{format_date post.createdAt}}</p>
+                        {{formattedDate post.createdAt}}</p>
                     <p>{{post.body}}</p>
                 </div>
                 <div class="card-action">
-                    <a href="/dashboard/edit/{{id}}" class="btn-floating deep-orange darken-3 pulse"><i
+                    <a href="/dashboard/edit/{{postId}}" class="btn-floating deep-orange darken-3 pulse"><i
                             class="material-icons">edit</i></a>
                 </div>
             </div>
@@ -53,7 +53,7 @@
         {{#each post.Comments}}
         <div class="col s12 m6">
             <div class="card-panel">
-                <span class="h5">{{User.username}}, {{format_date createdAt}}</span>
+                <span class="h5">{{User.username}}, {{formattedDate createdAt}}</span>
                 <span class="flow-text">{{body}}
                 </span>
             </div>
