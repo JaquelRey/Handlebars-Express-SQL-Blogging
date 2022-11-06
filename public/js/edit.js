@@ -37,6 +37,6 @@ const deleteHandler = async function () {
 };
 // adding listeners for onclick events
 // edit
-document.querySelector("#edit-button").addEventListener("click", editHandler);
+document.querySelector("#edit-form").addEventListener("submit", editHandler);
 // delete
 document.querySelector("#delete-button").addEventListener("click", deleteHandler);

@@ -4,7 +4,7 @@ const postHandler = async function (event) {
   event.preventDefault();
   // get data from the post form
   const title = document.querySelector('input[name="post-title"]').value;
-  const content = document.querySelector('textarea[name="post-content"]').value;
+  const content = document.querySelector('textarea[name="post-body"]').value;
   // send data as jason string as POST to post route
   await fetch(`/api/post`, {
     method: "POST",
@@ -19,5 +19,5 @@ const postHandler = async function (event) {
 };
 // listener for click on form submission
 document
-  .querySelector("#post-button")
-  .addEventListener("click", postHandler);
+  .querySelector("#post-form")
+  .addEventListener("submit", postHandler);
