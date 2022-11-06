@@ -1,9 +1,11 @@
+const elems = document.getElementById("#modal1");
 document.addEventListener("DOMContentLoaded", function () {
-  const elems = document.querySelector("#modal1");
+  const elems = document.getElementById("#modal1");
   M.Modal.init(elems);
 });
 // for a user to login,
 const loginHandler = async function (event) {
+  const instance = M.Modal.init(elems);
   //prevent reload for onclick submit
   event.preventDefault();
   // get user input for username and pw
@@ -22,6 +24,7 @@ const loginHandler = async function (event) {
   // user is redirected to dashboard.
   // if failed, user is alerted and remains on login view
   if (res.ok) {
+    instance.close()
     document.location.replace("/dashboard");
   } else {
     alert("Login failed, try again.");
