@@ -19,5 +19,5 @@ const postHandler = async function (event) {
 };
 // listener for click on form submission
 document
-  .querySelector("#post-form")
+  .querySelector(".post-form")
   .addEventListener("submit", postHandler);
