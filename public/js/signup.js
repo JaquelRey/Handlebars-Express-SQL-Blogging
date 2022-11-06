@@ -30,16 +30,16 @@ const signupHandler = async function (event) {
     // else, alert user to failure
     if (res.ok) {
       document.location.replace("/dashboard");
-      passwordEl.innerHTML = ''
-      usernameEl.innerHTML = ''
-      logout.classList.remove('hide')
-      logout2.classList.remove('hide')
-      click.classList.add('hide')
-      click2.classList.add('hide')
-      elem.classList.add('hide')
+      pwEl.value = ''
+      nameEl.value = ''
+      logout.hidden = false
+      logout2.hidden = false
+      click.hidden = false
+      click2.hidden = false
+      elem.hidden = true
     } else {
       alert('Failed to sign up');
-      passwordEl.innerHTML = ''
+      pwEl.value = ''
     }
   };
   // event listener for signup button

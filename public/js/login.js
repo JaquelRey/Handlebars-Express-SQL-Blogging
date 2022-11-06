@@ -30,15 +30,16 @@ const loginHandler = async function (event) {
   if (res.ok) {
     
     document.location.replace("/dashboard");
-    passwordEl.innerHTML = ''
-    usernameEl.innerHTML = ''
-    logout12.classList.remove('hide')
-    logout22.classList.remove('hide')
-    click12.classList.add('hide')
-    click22.classList.add('hide')
-    elemt.classList.add('hide')
+    pwElL.value = ''
+    nameElL.value = ''
+    logout12.hidden = false
+    logout22.hidden = false
+    click12.hidden = false
+    click22.hidden = false
+    elemt.hidden = true
   } else {
     alert("Login failed, try again.");
+    pwElL.value = ''
   }
 };
 // click event listener for login form submission
