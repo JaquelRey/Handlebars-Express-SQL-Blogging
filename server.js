@@ -30,7 +30,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
 app.engine(
   "handlebars",
-  hbs.engine({
+  hbs({
     layoutsDir: __dirname + "/public/views/layouts",
     defaultLayout: "main",
     extname: "handlebars",
