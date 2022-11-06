@@ -4,13 +4,14 @@ const logout2 = document.getElementById("#logout-link2");
 const click = document.getElementById("#signup-btn")
 const click2 = document.getElementById("#signup-btn2")
 document.addEventListener("DOMContentLoaded", function () {
+  let instance = M.Modal.getInstance(elem)
   M.Modal.init(elem, {dismissible: false});
   instance.open();
 });
 
 // to sign up,
 const signupHandler = async function (event) {
-  const instance = M.Modal.getInstance(elem);
+  let instance = M.Modal.getInstance(elem);
     // prevent reload on form submit
     event.preventDefault();
     // get user input for username and password

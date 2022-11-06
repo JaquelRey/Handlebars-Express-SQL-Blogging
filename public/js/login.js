@@ -1,7 +1,6 @@
 const elems = document.getElementById("#modal1");
-const logout2 = document.getElementById("#logout-link");
+const logout12 = document.getElementById("#logout-link");
 const logout22 = document.getElementById("#logout-link2");
-
 const click = document.getElementById("#signup-btn")
 const click2 = document.getElementById("#signup-btn2")
 document.addEventListener("DOMContentLoaded", function () {
@@ -33,7 +32,7 @@ const loginHandler = async function (event) {
     document.location.replace("/dashboard");
     passwordEl.innerHTML = ''
     usernameEl.innerHTML = ''
-    logout2.classList.remove('hide')
+    logout12.classList.remove('hide')
     logout22.classList.remove('hide')
     click.classList.add('hide')
     click2.classList.add('hide')
