@@ -1,14 +1,18 @@
-
+const elem = document.getElementById("#modal2");
+const logout = document.getElementById("#logout-link");
+const logout2 = document.getElementById("#logout-link2");
+const instance = M.Modal.getInstance(elem);
+const click = document.getElementById("#signup-btn")
+const click2 = document.getElementById("#signup-btn2")
 document.addEventListener("DOMContentLoaded", function () {
-  const elem = document.getElementById("#modal2");
   M.Modal.init(elem, {dismissible: false});
-  const instance = M.Modal.getInstance(elem);
   instance.open();
 });
+
+
 // to sign up,
 const signupHandler = async function (event) {
-  const elems = document.getElementById("#modal2");
-  const instance = M.Modal.init(elems);
+  const instance = M.Modal.getInstance(elem);
     // prevent reload on form submit
     event.preventDefault();
     // get user input for username and password
@@ -27,10 +31,14 @@ const signupHandler = async function (event) {
     // redirect user to their dashboard
     // else, alert user to failure
     if (res.ok) {
-      instance.close()
+      instance.destroy()
       document.location.replace("/dashboard");
       passwordEl.innerHTML = ''
       usernameEl.innerHTML = ''
+      logout.classList.remove('hide')
+      logout2.classList.remove('hide')
+      click.classList.add('hide')
+      click2.classList.add('hide')
     } else {
       alert('Failed to sign up');
       passwordEl.innerHTML = ''

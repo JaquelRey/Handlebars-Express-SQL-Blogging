@@ -1,11 +1,15 @@
 const elems = document.getElementById("#modal1");
+const logout = document.getElementById("#logout-link");
+const logout2 = document.getElementById("#logout-link2");
+const instance = M.Modal.getInstance(elems);
+const click = document.getElementById("#signup-btn")
+const click2 = document.getElementById("#signup-btn2")
 document.addEventListener("DOMContentLoaded", function () {
   const elems = document.getElementById("#modal1");
   M.Modal.init(elems);
 });
 // for a user to login,
 const loginHandler = async function (event) {
-  const instance = M.Modal.init(elems);
   //prevent reload for onclick submit
   event.preventDefault();
   // get user input for username and pw
@@ -24,8 +28,14 @@ const loginHandler = async function (event) {
   // user is redirected to dashboard.
   // if failed, user is alerted and remains on login view
   if (res.ok) {
-    instance.close()
+    instance.destroy()
     document.location.replace("/dashboard");
+    passwordEl.innerHTML = ''
+    usernameEl.innerHTML = ''
+    logout.classList.remove('hide')
+    logout2.classList.remove('hide')
+    click.classList.add('hide')
+    click2.classList.add('hide')
   } else {
     alert("Login failed, try again.");
   }
