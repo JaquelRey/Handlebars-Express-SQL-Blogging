@@ -1,14 +1,12 @@
 const elem = document.getElementById("#modal2");
 const logout = document.getElementById("#logout-link");
 const logout2 = document.getElementById("#logout-link2");
-const instance = M.Modal.getInstance(elem);
 const click = document.getElementById("#signup-btn")
 const click2 = document.getElementById("#signup-btn2")
 document.addEventListener("DOMContentLoaded", function () {
   M.Modal.init(elem, {dismissible: false});
   instance.open();
 });
-
 
 // to sign up,
 const signupHandler = async function (event) {

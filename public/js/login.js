@@ -1,7 +1,7 @@
 const elems = document.getElementById("#modal1");
 const logout2 = document.getElementById("#logout-link");
 const logout22 = document.getElementById("#logout-link2");
-const instance = M.Modal.getInstance(elems);
+
 const click = document.getElementById("#signup-btn")
 const click2 = document.getElementById("#signup-btn2")
 document.addEventListener("DOMContentLoaded", function () {
@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // for a user to login,
 const loginHandler = async function (event) {
   //prevent reload for onclick submit
+  const instance = M.Modal.getInstance(elems);
   event.preventDefault();
   // get user input for username and pw
   const nameElL = document.querySelector("#name-input-login");
