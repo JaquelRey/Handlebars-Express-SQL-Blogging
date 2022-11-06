@@ -1,11 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   const elems = document.querySelectorAll('.modal')
   M.Modal.init(elems, {dismissible: false});
-  const elemt = document.querySelectorAll("#modal2");
-  if (elemt){
-    let instance1 = M.Modal.getInstance(elemt)
-    instance1.open();
-  }
 });
 const logout = document.getElementById("#logout-link");
 const logout2 = document.getElementById("#logout-link2");

@@ -1,16 +1,17 @@
-const elems = document.getElementById("#modal1");
+document.addEventListener("DOMContentLoaded", function () {
+  const elems = document.querySelectorAll(".modal");
+  M.Modal.init(elems);
+});
+
 const logout12 = document.getElementById("#logout-link");
 const logout22 = document.getElementById("#logout-link2");
 const click12 = document.getElementById("#signup-btn")
 const click22 = document.getElementById("#signup-btn2")
-document.addEventListener("DOMContentLoaded", function () {
-  const elems = document.getElementById("#modal1");
-  M.Modal.init(elems);
-});
 // for a user to login,
 const loginHandler = async function (event) {
   //prevent reload for onclick submit
-  const instance = M.Modal.getInstance(elems);
+  const elemt = document.getElementById("#modal1");
+  const instance = M.Modal.getInstance(elemt);
   event.preventDefault();
   // get user input for username and pw
   const nameElL = document.querySelector("#name-input-login");
